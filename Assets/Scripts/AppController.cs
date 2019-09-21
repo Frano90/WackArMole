@@ -35,7 +35,7 @@ public class AppController : MonoBehaviour
 
         if(Input.touchCount == 1)
         {
-            Debug.Log("toque");
+            //Debug.Log("toque");
 
             Touch touch = Input.GetTouch(0);
 
@@ -50,7 +50,7 @@ public class AppController : MonoBehaviour
                     {
                         martillo.DoTheHit(hittedObject, delegate { hittedObject.DamageEnemy(1); } );
                         //hittedObject.DamageEnemy(1);
-                        Debug.Log("Te hago dano");
+                        //Debug.Log("Te hago dano");
                     }
                 }
             }

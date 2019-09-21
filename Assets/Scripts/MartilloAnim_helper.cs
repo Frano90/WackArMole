@@ -16,4 +16,10 @@ public class MartilloAnim_helper : MonoBehaviour
     {
         martillo.GoBackToPos();
     }
+
+    public void DamageTarget()
+    {
+        Debug.Log("CAcaca");
+        martillo.DamageTarget();
+    }
 }

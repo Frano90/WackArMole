@@ -6,12 +6,16 @@ using System;
 public class Enemy : MonoBehaviour
 {
     public int maxHp;
-    private int currentHp;
+    public int currentHp;
     public EnemyType type;
     public Spawner spawner;
 
     public event Action<EnemyType> OnEnemyDead = delegate { };
 
+    private void Start()
+    {
+        currentHp = maxHp;
+    }
     private void DestroySelf()
     {
         OnEnemyDead(type);
@@ -25,6 +29,7 @@ public class Enemy : MonoBehaviour
 
         if(currentHp <= 0)
         {
+            Debug.Log("Me muero");
             DestroySelf();
         }
 
